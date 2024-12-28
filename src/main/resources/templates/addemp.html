@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+  <head><meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+   
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>add emp</title>
+  </head>
+<body>
+    <h3>Add Employee</h3>
+    
+    <!-- navbar -->
+    
+    
+    
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">EMP System</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/">Home</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Add EMP</a>
+        </li>
+       
+        <li class="nav-item active ">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        </li>
+      </ul>
+     
+    </div>
+  </div>
+</nav>
+    
+    
+    
+    
+    <!-- navbar -->
+
+
+
+
+
+    <!-- form -->
+    
+     <div class="container mt-5 d-flex justify-content-center">
+        <!-- Custom Form Container -->
+        <div class="card shadow-lg p-4" style="max-width: 600px; width: 100%; border-radius: 15px; background-color: #f8f9fa;">
+            <h2 class="text-center mb-4">Employee Registration</h2>
+            <form th:action="@{/register}" method="post">
+                <!-- Name Field -->
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Enter employee name" required>
+                      </div>
+
+                <!-- Address Field -->
+                <div class="mb-3">
+                    <label for="address" class="form-label">Address</label>
+                    <textarea class="form-control" id="address" rows="3" name="address" placeholder="Enter employee address" required></textarea>
+ </div>
+
+                <!-- Email Field -->
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                   <input type="email" class="form-control" id="email" name="email" placeholder="Enter employee email" required>
+  </div>
+
+                <!-- Phone Number Field -->
+                <div class="mb-3">
+                    <label for="phone" class="form-label">Phone Number</label>
+                    <input type="tel" class="form-control" id="phone" placeholder="Enter phone number" name="phoneNo"  required>
+  <small class="form-text text-muted">Phone number should be 10 digits.</small>
+                </div>
+
+                <!-- Salary Field -->
+                <div class="mb-3">
+                    <label for="salary" class="form-label">Salary</label>
+                    <input type="number" class="form-control" id="salary" name="salary" placeholder="Enter salary amount" required>
+ </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="btn btn-primary w-100">Submit</button>
+            </form>
+        </div>
+    </div>
+    <!-- form -->
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+     </body>
+</html>
